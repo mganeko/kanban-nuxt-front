@@ -17,6 +17,9 @@ export default {
     base: FRONT_BASE
   },
 
+  // for static site (generate)
+  target: 'static',
+
   /*
   ** Headers of the page
   */
