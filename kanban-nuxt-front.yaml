@@ -1,0 +1,28 @@
+name: kanban-nuxt-front
+region: fra
+static_sites:
+- build_command: |
+    npm run generate
+  environment_slug: node-js
+  envs:
+  - key: GRAHPQL_HOST
+    scope: BUILD_TIME
+    type: SECRET
+    value: EV[1:t83gtSmXt2PkUeC4Ftd6t8IW+k3RSqJy:8pcL7LVDnYRoXU4G8eIRDA478LmFLnkZZ8o5DRQGCx8Z6aCNZUvTs5W5DgDITFA+ooQQUGlqopVajfSG610=]
+  - key: GRAPHQL_PORT
+    scope: BUILD_TIME
+    type: SECRET
+    value: EV[1:mTPzCRS/0qzBw+WWpGZMgM/uNhD/goIm:w8ZcusptLm6A1aIDWLVqjXC0pF8=]
+  - key: GRAPHQL_BROWSER_URL
+    scope: BUILD_TIME
+    type: SECRET
+    value: EV[1:h9gHOs+9PNBhBceYF1qtts4w9hJPqGst:6Z7akZSSRIiQzDK6SiioMjXy5Xo8yDY/ryGcJJ1+KpcOhT9zCztCFEZhMdIE0Ufw2nTOHqEzup3Wm3ZRdVcwy5Ngqt6S1i0=]
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: mganeko/kanban-nuxt-front
+  name: kanban-nuxt-front
+  routes:
+  - path: /
+  output_dir:
+    dist/
